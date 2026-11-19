@@ -35,7 +35,7 @@ def mesure_time(N, f, args):
     for i in range(N):
         debut = time.perf_counter()
         f(*args)
-        times.append(time.perf_counter - debut)
+        times.append(time.perf_counter() - debut)
     return np.mean(times)
 
 X = np.arange(201)
